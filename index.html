@@ -70,11 +70,11 @@
             background: #f1f5f9; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease; position: relative; min-height: 220px;
             display: flex; align-items: center; justify-content: center;
-            border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; text-align: center; padding: 1rem;
+            border: 2px solid #cbd5e1;
         }
         .image-box:hover { transform: scale(1.03); }
+        /* استایل عکس: کاملاً تمیز */
         .image-box img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2; }
-        .image-box span { z-index: 1; font-size: 0.95rem; }
         .conclusion { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-right-color: #22c55e; }
         .conclusion h2 { color: #166534; }
         .conclusion h2::before { content: '🎯'; }
@@ -111,71 +111,49 @@
     </header>
 
     <div class="container">
-        <!-- بخش ۱ -->
         <div class="card">
             <h2>ویژگی‌های فرهنگ‌های جهانی</h2>
             <p>فرهنگ جهانی یعنی بخشی از فرهنگ‌ها و آداب‌رسومی که از مرزهای یک کشور فراتر می‌روند و در سراسر دنیا پخش می‌شوند. این فرهنگ‌ها چند ویژگی مهم دارند:</p>
             <ul>
-                <li><strong>ارزش‌های عمیق انسانی:</strong> شامل ارزش‌ها و اعتقادات اصلی و عمیق انسانی هستند (مثل احترام به پدر و مادر یا کمک به دیگران).</li>
+                <li><strong>ارزش‌های عمیق انسانی:</strong> شامل ارزش‌ها و اعتقادات اصلی و عمیق انسانی هستند.</li>
                 <li><strong>زندگی روزمره:</strong> با زندگی روزمره‌ی مردم عادی گره خورده‌اند.</li>
                 <li><strong>مشترکات انسانی:</strong> فقط مال یک قوم یا منطقه خاص نیستند، بلکه بین همه‌ی انسان‌ها مشترک هستند.</li>
                 <li><strong>دید باز:</strong> باعث می‌شوند که ما نسبت به بقیه‌ی انسان‌ها و عقایدشان دید بازتر و محترمانه‌تری داشته باشیم.</li>
             </ul>
             <div class="image-gallery">
-                <div class="image-box">
-                    <img src="./img1.png" alt="فرش ایرانی" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span>🖼️ عکس ۱: فرش ایرانی</span>
-                </div>
-                <div class="image-box">
-                    <img src="./img2.png" alt="اسکناس‌های ایران" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span>🖼️ عکس ۲: اسکناس‌های ایران</span>
-                </div>
-                <div class="image-box">
-                    <img src="./img3.png" alt="مراسم فرهنگی" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span>🖼️ عکس ۳: مراسم و جشن‌های فرهنگی</span>
-                </div>
+                <div class="image-box"><img src="./img1.png" alt="فرش ایرانی"></div>
+                <div class="image-box"><img src="./img2.png" alt="اسکناس‌های ایران"></div>
+                <div class="image-box"><img src="./img3.png" alt="مراسم فرهنگی"></div>
             </div>
         </div>
 
-        <!-- بخش ۲ -->
         <div class="card">
             <h2>تفاوت «جهانی شدن» با «غربی شدن»</h2>
             <p>این خیلی نکته‌ی مهمی است! خیلی‌ها فکر می‌کنند جهانی شدن یعنی غربی شدن، اما این‌طور نیست.</p>
             <ul>
-                <li><strong>غربی شدن:</strong> یعنی فرهنگ کشورهای غربی (مثل آمریکا و اروپا) به زور یا با تبلیغات زیاد جایگزین فرهنگ‌های دیگر شود.</li>
+                <li><strong>غربی شدن:</strong> یعنی فرهنگ کشورهای غربی به زور یا با تبلیغات زیاد جایگزین فرهنگ‌های دیگر شود.</li>
                 <li><strong>جهانی شدن:</strong> یعنی فرهنگ‌های مختلف با هم تعامل داشته باشند و یک فرهنگ مشترک انسانی بسازند.</li>
             </ul>
             <p>پس جهانی شدن می‌تواند خوب باشد، به شرطی که ما هویت و فرهنگ خودمان را حفظ کنیم.</p>
             <div class="image-gallery">
-                <div class="image-box">
-                    <img src="./img4.png" alt="جهانی شدن" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span>🖼️ عکس ۴: نماد جهانی شدن</span>
-                </div>
+                <div class="image-box"><img src="./img4.png" alt="جهانی شدن"></div>
             </div>
         </div>
 
-        <!-- بخش ۳ -->
         <div class="card">
             <h2>چرا باید به فرهنگ‌های دیگر احترام بگذاریم؟</h2>
             <p>ما مسلمان هستیم و دین ما هم به ما یاد داده که به همه انسان‌ها احترام بگذاریم. در قرآن هم داریم که همه‌ی انسان‌ها از یک زن و مرد (آدم و حوا) آفریده شده‌اند. پس همه‌ی ما با هم برابریم.</p>
             <p>احترام گذاشتن به فرهنگ‌های دیگر باعث می‌شود که آن‌ها هم به فرهنگ ما احترام بگذارند و صلح و دوستی در دنیا بیشتر شود.</p>
             <div class="image-gallery">
-                <div class="image-box">
-                    <img src="./img5.png" alt="احترام به فرهنگ‌ها" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span>🖼️ عکس ۵: نماد احترام و صلح</span>
-                </div>
+                <div class="image-box"><img src="./img5.png" alt="احترام به فرهنگ‌ها"></div>
             </div>
         </div>
 
-        <!-- بخش ۴ -->
         <div class="card conclusion">
             <h2>نتیجه‌گیری</h2>
             <p>در آخر می‌خواهم بگویم که ما باید هم فرهنگ خودمان را بشناسیم و به آن افتخار کنیم، و هم به فرهنگ‌های دیگر احترام بگذاریم. جهانی شدن فرهنگ نباید باعث شود ما هویت خودمان را فراموش کنیم.</p>
             <div class="image-gallery">
-                <div class="image-box">
-                    <img src="./img6.png" alt="نتیجه‌گیری و اتحاد" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span>🖼️ عکس ۶: نماد همدلی</span>
-                </div>
+                <div class="image-box"><img src="./img6.png" alt="نتیجه‌گیری و اتحاد"></div>
             </div>
             <p style="text-align: center; font-weight: bold; color: var(--primary-color); margin-top: 1.5rem; font-size: 1.2rem;">با تشکر از توجه شما 🌹</p>
         </div>
