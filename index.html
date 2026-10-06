@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کنفرانس فرهنگ جهانی - مانی رهبری</title>
+    <!-- فونت‌های وزیرمتن و لاله‌زار -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    
+    <style>
+        /* تنظیمات کلی و متغیرها */
+        :root {
+            --primary-color: #1e3a8a; /* سرمه‌ای */
+            --secondary-color: #3b82f6; /* آبی روشن */
+            --accent-color: #f59e0b; /* طلایی/نارنجی */
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --card-bg: #ffffff;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* --- بخش هدر (بدون کادر و دایره) --- */
+        header {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+            animation: rotate 25s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* متن بسم‌الله (بدون کادر) */
+        .bismillah-text {
+            font-family: 'Lalezar', cursive;
+            font-size: 3.5rem;
+            color: #fcd34d; /* طلایی روشن */
+            text-shadow: 0 0 15px rgba(252, 211, 77, 0.6);
+            text-align: center;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            direction: rtl;
+            letter-spacing: 2px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            font-weight: 400;
+        }
+
+        /* بخش سلام و معرفی (داخل هدر) */
+        .intro-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
+            max-width: 750px;
+            margin-top: 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            font-size: 1.05rem;
+            line-height: 2;
+        }
+
+        .intro-box strong {
+            color: var(--accent-color);
+        }
+
+        /* کانتینر اصلی */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* کارت‌های محتوا */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-right: 5px solid var(--accent-color);
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h2::before {
+            content: '📌';
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-right: 1rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .card ul li::before {
+            content: '✅';
+            position: absolute;
+            right: 0;
+            color: var(--secondary-color);
+        }
+
+        /* بخش عکس‌ها */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .image-box {
+            background: #f1f5f9;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #cbd5e1;
+            color: #64748b;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .image-box:hover {
+            transform: scale(1.03);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .image-box span {
+            z-index: 1;
+            font-size: 0.95rem;
+        }
+
+        /* بخش نتیجه‌گیری */
+        .conclusion {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-right-color: #22c55e;
+        }
+
+        .conclusion h2 {
+            color: #166534;
+        }
+
+        .conclusion h2::before {
+            content: '🎯';
+        }
+
+        /* فوتر */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        /* تنظیمات موبایل */
+        @media (max-width: 768px) {
+            header { padding: 3rem 1rem 2rem; }
+            .bismillah-text { font-size: 2.2rem; }
+            header h1 { font-size: 1.6rem; }
+            header h2 { font-size: 1.1rem; }
+            .intro-box { font-size: 0.95rem; padding: 1rem; }
+            .card { padding: 1.5rem; }
+            .card h2 { font-size: 1.3rem; }
+            .card p { font-size: 1rem; }
+            .image-gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- بخش هدر (بسم‌الله، عنوان و سلام) -->
+    <header>
+        <div class="hero-content">
+            
+            <!-- متن بسم‌الله بدون کادر -->
+            <div class="bismillah-text">
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            </div>
+            
+            <h1>🌍 فرهنگ جهانی و ویژگی‌های آن</h1>
+            <h2>ارائه‌ی کنفرانس - پایه یازدهم انسانی</h2>
+            
+            <!-- بخش سلام و معرفی -->
+            <div class="intro-box">
+                <strong>سلام بر همه شما دوستان و معلم عزیز.</strong><br>
+                من <strong>مانی رهبری</strong> هستم. 
+                موضوع کنفرانس امروز من درباره‌ی «فرهنگ جهانی» است. 
+                همانطور که می‌دانید، هر کشوری در دنیا فرهنگ، آداب و رسوم و اعتقادات خاص خودش را دارد. 
+                اما آیا تا به حال فکر کرده‌اید چرا بعضی از فرهنگ‌ها و آداب‌رسوم‌ها در کل جهان شناخته شده‌اند و همه جا دیده می‌شوند؟ 
+                به این اتفاق، «جهانی شدن فرهنگ» می‌گویند.
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- بخش ۱: ویژگی‌ها -->
+        <div class="card">
+            <h2>ویژگی‌های فرهنگ‌های جهانی</h2>
+            <p>فرهنگ جهانی یعنی بخشی از فرهنگ‌ها و آداب‌رسومی که از مرزهای یک کشور فراتر می‌روند و در سراسر دنیا پخش می‌شوند. این فرهنگ‌ها چند ویژگی مهم دارند:</p>
+            <ul>
+                <li><strong>ارزش‌های عمیق انسانی:</strong> شامل ارزش‌ها و اعتقادات اصلی و عمیق انسانی هستند (مثل احترام به پدر و مادر یا کمک به دیگران).</li>
+                <li><strong>زندگی روزمره:</strong> با زندگی روزمره‌ی مردم عادی گره خورده‌اند.</li>
+                <li><strong>مشترکات انسانی:</strong> فقط مال یک قوم یا منطقه خاص نیستند، بلکه بین همه‌ی انسان‌ها مشترک هستند.</li>
+                <li><strong>دید باز:</strong> باعث می‌شوند که ما نسبت به بقیه‌ی انسان‌ها و عقایدشان دید بازتر و محترمانه‌تری داشته باشیم.</li>
+            </ul>
+            <div class="image-gallery">
+                <!-- عکس ۱: فرش ایرانی یا اسکناس‌ها -->
+                <div class="image-box">
+                    <img src="img1.jpg" alt="فرش ایرانی" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span>🖼️ عکس ۱: فرش ایرانی (نماد فرهنگ بومی)</span>
+                </div>
+                <div class="image-box">
+                    <img src="img2.jpg" alt="اسکناس‌های ایران" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span>🖼️ عکس ۲: اسکناس‌های ایران (نماد اقتصادی-فرهنگی)</span>
+                </div>
+                <!-- عکس ۳: جشنواره یا مراسم فرهنگی -->
+                <div class="image-box">
+                    <img src="img3.jpg" alt="مراسم فرهنگی" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span>🖼️ عکس ۳: مراسم و جشن‌های فرهنگی</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- بخش ۲: جهانی شدن vs غربی شدن (به همراه عکس) -->
+        <div class="card">
+            <h2>تفاوت «جهانی شدن» با «غربی شدن»</h2>
+            <p>این خیلی نکته‌ی مهمی است! خیلی‌ها فکر می‌کنند جهانی شدن یعنی غربی شدن، اما این‌طور نیست.</p>
+            <ul>
+                <li><strong>غربی شدن:</strong> یعنی فرهنگ کشورهای غربی (مثل آمریکا و اروپا) به زور یا با تبلیغات زیاد جایگزین فرهنگ‌های دیگر شود.</li>
+                <li><strong>جهانی شدن:</strong> یعنی فرهنگ‌های مختلف با هم تعامل داشته باشند و یک فرهنگ مشترک انسانی بسازند.</li>
+            </ul>
+            <p>پس جهانی شدن می‌تواند خوب باشد، به شرطی که ما هویت و فرهنگ خودمان را حفظ کنیم. امروزه قدرت‌های بزرگ دنیا سعی می‌کنند فرهنگ خودشان را به بقیه کشورها تحمیل کنند، اما ما باید حواسمان باشد که این‌کار باعث از بین رفتن فرهنگ خودمان نشود.</p>
+            
+            <!-- گالری عکس اضافه شده برای این بخش -->
+            <div class="image-gallery">
+                <div class="image-box">
+                    <img src="img4.jpg" alt="جهانی شدن" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span>🖼️ عکس ۴: نماد جهانی شدن و تعامل فرهنگ‌ها</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- بخش ۳: احترام به فرهنگ‌ها (به همراه عکس) -->
+        <div class="card">
+            <h2>چرا باید به فرهنگ‌های دیگر احترام بگذاریم؟</h2>
+            <p>
+                ما مسلمان هستیم و دین ما هم به ما یاد داده که به همه انسان‌ها احترام بگذاریم. 
+                در قرآن هم داریم که همه‌ی انسان‌ها از یک زن و مرد (آدم و حوا) آفریده شده‌اند. پس همه‌ی ما با هم برابریم.
+            </p>
+            <p>
+                اگر ما فرهنگ و عقاید دیگران را مسخره کنیم یا به آن‌ها بی‌احترامی کنیم، در واقع داریم کار اشتباهی انجام می‌دهیم. 
+                احترام گذاشتن به فرهنگ‌های دیگر باعث می‌شود که آن‌ها هم به فرهنگ ما احترام بگذارند و صلح و دوستی در دنیا بیشتر شود.
+            </p>
+            <div class="image-gallery">
+                <!-- عکس ۵: عکس جدید برای بخش احترام -->
+                <div class="image-box">
+                    <img src="img5.jpg" alt="احترام به فرهنگ‌ها" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span>🖼️ عکس ۵: نماد احترام، صلح و دوستی بین فرهنگ‌ها</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- بخش ۴: نتیجه‌گیری (به همراه عکس) -->
+        <div class="card conclusion">
+            <h2>نتیجه‌گیری</h2>
+            <p>
+                در آخر می‌خواهم بگویم که ما باید هم فرهنگ خودمان را بشناسیم و به آن افتخار کنیم، و هم به فرهنگ‌های دیگر احترام بگذاریم. 
+                جهانی شدن فرهنگ نباید باعث شود ما هویت خودمان را فراموش کنیم. 
+                همانطور که در عکس‌ها دیدیم، انسان‌ها نیازهای معنوی و روحی خود را به روش‌های مختلفی برطرف می‌کنند و ما نباید بگوییم فقط راه ما درست است.
+            </p>
+            <div class="image-gallery">
+                <!-- عکس ۶: عکس جدید برای بخش نتیجه‌گیری -->
+                <div class="image-box">
+                    <img src="img6.jpg" alt="نتیجه‌گیری و اتحاد" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span>🖼️ عکس ۶: نماد همدلی و نتیجه‌گیری</span>
+                </div>
+            </div>
+            <p style="text-align: center; font-weight: bold; color: var(--primary-color); margin-top: 1.5rem; font-size: 1.2rem;">
+                با تشکر از توجه شما 🌹
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        ساخته شده برای کنفرانس کلاسی | مانی رهبری | پایه یازدهم
+    </footer>
+
+</body>
+      </html>
